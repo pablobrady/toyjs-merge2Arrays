@@ -10,9 +10,14 @@ module.exports = function() {
     throw new TypeError('sum() expects only numbers.')
   }
 
-  // Return the sum of the arguments
-  return args.reduce(function(a, b) {
-    return a + b
-  }, 0);
 
+  // Return the problem output
+  var mergeTwoArrays = function (myList, yourList) {
+    console.log("myList >>> " + myList )
+    console.log("yourList >>> " + yourList )
+    
+    return { myList, yourList }
+  }
+
+  return mergeTwoArrays(args)
 }

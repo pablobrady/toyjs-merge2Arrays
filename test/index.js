@@ -1,19 +1,46 @@
 /* ./test/index.js */
 
-/* Answer Key */
-const answerKey = [0, 1, 2];
-
-var solved = require('../solved');
+/* Source Data */
+var mergeTwoArrays = require('../mergeTwoArrays');
 var chai = require('chai'); // Only required for headless testing - "> mocha"
 var assert = chai.assert;
+var expect = chai.expect;
 
 describe('Answer Key Validation', function() {
-  it('answer key has a .length of XX', function() {;
-    assert.equal(answerKey.length, 3);
+  it('mergeTwoArrays - Mixed values', function() {
+
+    var myList   = [3, 4, 6, 10, 11, 15];
+    var yourList = [1, 5, 8, 12, 14, 19];
+
+    expect( mergeTwoArrays(myList, yourList) ).to.eql( [1,3,4,5,6,8,10,11,12,14,15,19] );
+
   });
-  it('last answer key elements is 2', function() {
-    var answerKeyLastItem = answerKey[answerKey.length-1];
-    assert.equal(answerKeyLastItem, 2);
+
+  it('mergeTwoArrays - More Mine than Yours', function() {
+
+    var myList   = [3, 4, 6, 10, 11, 15, 20];
+    var yourList = [1, 5, 8, 12, 14, 19];
+
+    expect( mergeTwoArrays(myList, yourList) ).to.eql( [1,3,4,5,6,8,10,11,12,14,15,19,20] );
+
+  });
+
+  it('mergeTwoArrays - More Yours than Mine', function() {
+
+    var myList   = [   4, 6, 10, 11, 15];
+    var yourList = [1, 5, 8, 12, 14, 19, 21];
+
+    expect( mergeTwoArrays(myList, yourList) ).to.eql( [1,4,5,6,8,10,11,12,14,15,19,21] );
+
+  });
+
+  it('mergeTwoArrays - Mine has a few in a row', function() {
+
+    var myList   = [   4, 6, 10, 11, 15];
+    var yourList = [1, 5, 8, 12, 14, 19, 21];
+
+    expect( mergeTwoArrays(myList, yourList) ).to.eql( [1,4,5,6,8,10,11,12,14,15,19,21] );
+
   });
 });
 

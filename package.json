@@ -1,5 +1,5 @@
 {
-  "name": "toy-mocha-template-cl",
+  "name": "toyjs-merge2Arrays",
   "version": "1.0.0",
   "description": "Toy Problems with Mocha/Chai tests",
   "main": "toy.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pablobrady/toy-mocha-template.git"
+    "url": "git+https://github.com/pablobrady/toyjs-merge2Arrays.git"
   },
   "author": "Paul Brady",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/pablobrady/toy-mochatemplate/issues"
+    "url": "https://github.com/pablobrady/toyjs-merge2Arrays/issues"
   },
-  "homepage": "https://github.com/pablobrady/toy-mocha-template#readme",
+  "homepage": "https://github.com/pablobrady/toyjs-merge2Arrays#readme",
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^6.2.0"
