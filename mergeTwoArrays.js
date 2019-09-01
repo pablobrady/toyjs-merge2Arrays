@@ -52,26 +52,24 @@ module.exports = function() {
   //     // sleep(200);
   //   }
 
+
   var solution = function (myList, yourList) {
-    console.log( "OPTIMIZED SOLUTION() ARRIVAL:::");
+    // Optimized Solution
     var outputObj = {}, outputList = [], myIdx = 0, yourIdx = 0;
     
     myList.forEach(element => {
-      outputObj[element] = 1;
+      outputObj[element] = true;
     });
 
     yourList.forEach(element => {
-      outputObj[element] = 1;
+      outputObj[element] = true;
     });
 
     for(let [key, value] of Object.entries(outputObj) ) {
-      console.log(`${key}: ${value}`);
+      // console.log(`${key}: ${value}`);
       outputList.push( Number(key) )
     }
 
-    console.log("outputList[] ==> " + outputList )
-    console.log("outputList[0] ==> " + outputList[0] )
-    
     return outputList
   }
 
