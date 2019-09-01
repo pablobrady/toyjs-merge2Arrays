@@ -29,30 +29,48 @@ module.exports = function() {
    GOAL:  Merge the contents of two input arrays, 
           keeping the elements in numerical order.
   */
+  // var solution = function (myList, yourList) {
+  //   console.log( "SOLUTION() ARRIVAL:::");
+  //   var outputList = [], myIdx = 0, yourIdx = 0;
+  //   while( myIdx < myList.length || yourIdx < yourList.length ) {
+  //     var myValue = myList[myIdx] || -1;
+  //     var yourValue = yourList[yourIdx] || -1;
+
+  //     console.log("TEST VALUES LOG:  myValue = " + myValue + " -- vs. -- yourValue = " + yourValue)
+
+  //     // Take the smaller of the two
+  //     if( myValue < yourValue) {
+  //       outputList.push( myValue==-1 ? yourList[yourIdx++] : myList[myIdx++] )
+  //     } else if( yourValue < myValue) {
+  //       outputList.push( yourValue==-1 ? myList[myIdx++] : yourList[yourIdx++] )
+  //     } 
+  //     else if ( myValue==-1 && yourValue==-1 ) {
+  //       console.log("ERR: No valid values left!")
+  //       break;
+  //     }
+
+  //     // sleep(200);
+  //   }
+
   var solution = function (myList, yourList) {
-    console.log( "SOLUTION() ARRIVAL:::");
-    var outputList = [], myIdx = 0, yourIdx = 0;
-    while( myIdx < myList.length || yourIdx < yourList.length ) {
-      var myValue = myList[myIdx] || -1;
-      var yourValue = yourList[yourIdx] || -1;
+    console.log( "OPTIMIZED SOLUTION() ARRIVAL:::");
+    var outputObj = {}, outputList = [], myIdx = 0, yourIdx = 0;
+    
+    myList.forEach(element => {
+      outputObj[element] = 1;
+    });
 
-      console.log("TEST VALUES LOG:  myValue = " + myValue + " -- vs. -- yourValue = " + yourValue)
+    yourList.forEach(element => {
+      outputObj[element] = 1;
+    });
 
-      // Take the smaller of the two
-      if( myValue < yourValue) {
-        outputList.push( myValue==-1 ? yourList[yourIdx++] : myList[myIdx++] )
-      } else if( yourValue < myValue) {
-        outputList.push( yourValue==-1 ? myList[myIdx++] : yourList[yourIdx++] )
-      } 
-      else if ( myValue==-1 && yourValue==-1 ) {
-        console.log("ERR: No valid values left!")
-        break;
-      }
-
-      // sleep(200);
+    for(let [key, value] of Object.entries(outputObj) ) {
+      console.log(`${key}: ${value}`);
+      outputList.push( Number(key) )
     }
 
     console.log("outputList[] ==> " + outputList )
+    console.log("outputList[0] ==> " + outputList[0] )
     
     return outputList
   }

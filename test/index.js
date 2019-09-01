@@ -32,27 +32,27 @@ describe('***** Computed Answer Validations ******', function() {
 
   });
 
-  it('mergeTwoArrays - More Mine than Yours', function() {
+  // it('mergeTwoArrays - More Mine than Yours', function() {
 
-    var myList   = [3, 4, 6, 10, 11, 15, 20];
-    var yourList = [1, 5, 8, 12, 14, 19];
+  //   var myList   = [3, 4, 6, 10, 11, 15, 20];
+  //   var yourList = [1, 5, 8, 12, 14, 19];
 
-    var outputArray = mergeTwoArrays(myList, yourList)
+  //   var outputArray = mergeTwoArrays(myList, yourList)
 
-    assert.isArray( outputArray, "returns an Array" )
-    myList.forEach( function( num, idx) {
-      assert.include( outputArray, myList[idx], "includes all of myList array" );
-    })
-    myList.forEach( function( num, idx) {
-      assert.include( outputArray, yourList[idx], "includes all of yourList array" );
-    })
-    assert.equal( outputArray.length, (myList.length + yourList.length), "output length is expected (12)" )
+  //   assert.isArray( outputArray, "returns an Array" )
+  //   myList.forEach( function( num, idx) {
+  //     assert.include( outputArray, myList[idx], "includes all of myList array" );
+  //   })
+  //   myList.forEach( function( num, idx) {
+  //     assert.include( outputArray, yourList[idx], "includes all of yourList array" );
+  //   })
+  //   assert.equal( outputArray.length, (myList.length + yourList.length), "output length is expected (12)" )
     
-    outputArray.forEach( function( num, idx) {
-      assert.equal( outputArray[idx], [1,3,4,5,6,8,10,11,12,14,15,19][idx], 'precisely matches predicted array' )
-    })
+  //   outputArray.forEach( function( num, idx) {
+  //     assert.equal( outputArray[idx], [1,3,4,5,6,8,10,11,12,14,15,19][idx], 'precisely matches predicted array' )
+  //   })
 
-  });
+  // });
 
   // it('mergeTwoArrays - More Yours than Mine', function() {
 
